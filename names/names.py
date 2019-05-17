@@ -41,11 +41,13 @@ f = open('names_2.txt', 'r')
 names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
-duplicates = []
+
 # for name_1 in names_1:
 #     for name_2 in names_2:
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
+
+duplicates = []
 mid = (len(names_1)-1) //2
 tree = BinarySearchTree(names_1[mid])
 for name in names_1:

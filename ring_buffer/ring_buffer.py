@@ -10,9 +10,7 @@ class RingBuffer:
     elif len(self.storage) < self.capacity:
       self.storage.append(item)
     else:
-      insert_index = self.current
-      self.storage.pop(insert_index)
-      self.storage.insert(insert_index, item)
+      self.storage[self.current] = item
       if self.current < (self.capacity - 1):
         self.current +=1 
       else:
